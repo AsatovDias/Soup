@@ -1,0 +1,43 @@
+x-queue: &queue
+  build: .
+  image: soup-training-queue:local
+  environment:
+    DATABASE_URL: "postgres://queue:queue@db:5432/queue?sslmode=disable&default_transaction_isolation=read%20committed&connect_timeout=3"
+
+services:
+  db:
+    image: postgres:16-bookworm
+    environment:
+      POSTGRES_USER: queue
+      POSTGRES_PASSWORD: queue
+      POSTGRES_DB: queue
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U queue -d queue -h 127.0.0.1"]
+      interval: 1s
+      timeout: 3s
+      retries: 30
+    volumes:
+      - queue_data:/var/lib/postgresql/data
+  migrate:
+    <<: *queue
+    command: ["migrate"]
+    depends_on:
+      db:
+        condition: service_healthy
+  api:
+    <<: *queue
+    command: ["api"]
+    ports:
+      - "127.0.0.1:${QUEUE_PORT:-8080}:8080"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+  worker:
+    <<: *queue
+    command: ["worker"]
+    scale: 4
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+volumes:
+  queue_data:

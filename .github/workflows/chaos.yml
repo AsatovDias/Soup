@@ -1,0 +1,32 @@
+name: Queue checks
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  chaos:
+    name: Chaos seed ${{ matrix.seed }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        seed: [42, 731, 2026]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and run probes and chaos test
+        env:
+          QUEUE_LOG_DIR: ${{ runner.temp }}/queue-logs
+        run: bash ./run-checks.sh ${{ matrix.seed }}
+      - name: Save raw output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: queue-logs-seed-${{ matrix.seed }}
+          path: ${{ runner.temp }}/queue-logs/run-*-seed-${{ matrix.seed }}-*.log
+          if-no-files-found: error
