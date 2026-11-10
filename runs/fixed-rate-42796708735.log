@@ -1,0 +1,387 @@
+ db Pulling 
+ dd051e1b8c92 Pulling fs layer 
+ ffef70d379d2 Pulling fs layer 
+ 136766c05e5f Pulling fs layer 
+ 2a13757dbdad Pulling fs layer 
+ 61b3cc329be3 Pulling fs layer 
+ cda6e21da0f2 Pulling fs layer 
+ a8c21670182b Pulling fs layer 
+ fce9821bac7d Pulling fs layer 
+ 1d919c5645b1 Pulling fs layer 
+ 27df7b5bf0b5 Pulling fs layer 
+ 5760334e16b5 Pulling fs layer 
+ b056e8cb2530 Pulling fs layer 
+ 9bcbde3fb062 Pulling fs layer 
+ 68d798fb46d0 Pulling fs layer 
+ fce9821bac7d Waiting 
+ 1d919c5645b1 Waiting 
+ 27df7b5bf0b5 Waiting 
+ 5760334e16b5 Waiting 
+ b056e8cb2530 Waiting 
+ 9bcbde3fb062 Waiting 
+ 2a13757dbdad Waiting 
+ 61b3cc329be3 Waiting 
+ cda6e21da0f2 Waiting 
+ a8c21670182b Waiting 
+ 68d798fb46d0 Waiting 
+ ffef70d379d2 Downloading [==================================================>]  1.166kB/1.166kB
+ ffef70d379d2 Download complete 
+ 136766c05e5f Downloading [>                                                  ]  48.55kB/4.534MB
+ dd051e1b8c92 Downloading [>                                                  ]  294.3kB/28.25MB
+ 136766c05e5f Verifying Checksum 
+ 136766c05e5f Download complete 
+ 2a13757dbdad Downloading [>                                                  ]  15.79kB/1.25MB
+ dd051e1b8c92 Downloading [=====================================>             ]  21.23MB/28.25MB
+ dd051e1b8c92 Download complete 
+ 2a13757dbdad Verifying Checksum 
+ 2a13757dbdad Download complete 
+ dd051e1b8c92 Extracting [>                                                  ]  294.9kB/28.25MB
+ 61b3cc329be3 Downloading [>                                                  ]  81.32kB/8.066MB
+ dd051e1b8c92 Extracting [============>                                      ]  7.078MB/28.25MB
+ cda6e21da0f2 Downloading [>                                                  ]  15.79kB/1.196MB
+ 61b3cc329be3 Verifying Checksum 
+ 61b3cc329be3 Download complete 
+ a8c21670182b Downloading [==================================================>]     116B/116B
+ a8c21670182b Verifying Checksum 
+ a8c21670182b Download complete 
+ cda6e21da0f2 Verifying Checksum 
+ cda6e21da0f2 Download complete 
+ dd051e1b8c92 Extracting [==================>                                ]  10.32MB/28.25MB
+ fce9821bac7d Downloading [==================================================>]  3.145kB/3.145kB
+ fce9821bac7d Verifying Checksum 
+ fce9821bac7d Download complete 
+ dd051e1b8c92 Extracting [=============================>                     ]  16.52MB/28.25MB
+ 27df7b5bf0b5 Downloading [=================>                                 ]  3.501kB/10.02kB
+ 27df7b5bf0b5 Downloading [==================================================>]  10.02kB/10.02kB
+ 27df7b5bf0b5 Verifying Checksum 
+ 27df7b5bf0b5 Download complete 
+ 1d919c5645b1 Downloading [>                                                  ]  525.1kB/111.8MB
+ dd051e1b8c92 Extracting [========================================>          ]  22.71MB/28.25MB
+ 5760334e16b5 Downloading [==================================================>]     128B/128B
+ 5760334e16b5 Verifying Checksum 
+ 5760334e16b5 Download complete 
+ 1d919c5645b1 Downloading [============>                                      ]  28.14MB/111.8MB
+ b056e8cb2530 Downloading [==================================================>]     167B/167B
+ b056e8cb2530 Verifying Checksum 
+ b056e8cb2530 Download complete 
+ 1d919c5645b1 Downloading [=============================>                     ]  66.34MB/111.8MB
+ dd051e1b8c92 Extracting [==========================================>        ]  23.89MB/28.25MB
+ 9bcbde3fb062 Downloading [============================>                      ]  3.502kB/6.108kB
+ 9bcbde3fb062 Downloading [==================================================>]  6.108kB/6.108kB
+ 9bcbde3fb062 Verifying Checksum 
+ 9bcbde3fb062 Download complete 
+ 1d919c5645b1 Downloading [=================================================> ]  109.9MB/111.8MB
+ 1d919c5645b1 Verifying Checksum 
+ 1d919c5645b1 Download complete 
+ dd051e1b8c92 Extracting [===============================================>   ]  26.84MB/28.25MB
+ 68d798fb46d0 Downloading [==================================================>]     184B/184B
+ 68d798fb46d0 Verifying Checksum 
+ 68d798fb46d0 Download complete 
+ dd051e1b8c92 Extracting [================================================>  ]  27.43MB/28.25MB
+ dd051e1b8c92 Extracting [==================================================>]  28.25MB/28.25MB
+ dd051e1b8c92 Pull complete 
+ ffef70d379d2 Extracting [==================================================>]  1.166kB/1.166kB
+ ffef70d379d2 Extracting [==================================================>]  1.166kB/1.166kB
+ ffef70d379d2 Pull complete 
+ 136766c05e5f Extracting [>                                                  ]  65.54kB/4.534MB
+ 136766c05e5f Extracting [==================================================>]  4.534MB/4.534MB
+ 136766c05e5f Pull complete 
+ 2a13757dbdad Extracting [=>                                                 ]  32.77kB/1.25MB
+ 2a13757dbdad Extracting [==================================================>]   1.25MB/1.25MB
+ 2a13757dbdad Pull complete 
+ 61b3cc329be3 Extracting [>                                                  ]   98.3kB/8.066MB
+ 61b3cc329be3 Extracting [=============================>                     ]  4.817MB/8.066MB
+ 61b3cc329be3 Extracting [==================================================>]  8.066MB/8.066MB
+ 61b3cc329be3 Pull complete 
+ cda6e21da0f2 Extracting [=>                                                 ]  32.77kB/1.196MB
+ cda6e21da0f2 Extracting [==================================================>]  1.196MB/1.196MB
+ cda6e21da0f2 Extracting [==================================================>]  1.196MB/1.196MB
+ cda6e21da0f2 Pull complete 
+ a8c21670182b Extracting [==================================================>]     116B/116B
+ a8c21670182b Extracting [==================================================>]     116B/116B
+ a8c21670182b Pull complete 
+ fce9821bac7d Extracting [==================================================>]  3.145kB/3.145kB
+ fce9821bac7d Extracting [==================================================>]  3.145kB/3.145kB
+ fce9821bac7d Pull complete 
+ 1d919c5645b1 Extracting [>                                                  ]  557.1kB/111.8MB
+ 1d919c5645b1 Extracting [===>                                               ]  7.799MB/111.8MB
+ 1d919c5645b1 Extracting [=====>                                             ]  12.26MB/111.8MB
+ 1d919c5645b1 Extracting [========>                                          ]  18.38MB/111.8MB
+ 1d919c5645b1 Extracting [===========>                                       ]  26.18MB/111.8MB
+ 1d919c5645b1 Extracting [================>                                  ]  36.77MB/111.8MB
+ 1d919c5645b1 Extracting [====================>                              ]  46.79MB/111.8MB
+ 1d919c5645b1 Extracting [========================>                          ]  54.59MB/111.8MB
+ 1d919c5645b1 Extracting [===========================>                       ]  62.39MB/111.8MB
+ 1d919c5645b1 Extracting [=================================>                 ]  74.09MB/111.8MB
+ 1d919c5645b1 Extracting [=====================================>             ]     83MB/111.8MB
+ 1d919c5645b1 Extracting [=========================================>         ]  93.03MB/111.8MB
+ 1d919c5645b1 Extracting [===========================================>       ]  98.04MB/111.8MB
+ 1d919c5645b1 Extracting [=============================================>     ]  101.9MB/111.8MB
+ 1d919c5645b1 Extracting [===============================================>   ]  106.4MB/111.8MB
+ 1d919c5645b1 Extracting [================================================>  ]  108.6MB/111.8MB
+ 1d919c5645b1 Extracting [=================================================> ]  110.3MB/111.8MB
+ 1d919c5645b1 Extracting [==================================================>]  111.8MB/111.8MB
+ 1d919c5645b1 Pull complete 
+ 27df7b5bf0b5 Extracting [==================================================>]  10.02kB/10.02kB
+ 27df7b5bf0b5 Extracting [==================================================>]  10.02kB/10.02kB
+ 27df7b5bf0b5 Pull complete 
+ 5760334e16b5 Extracting [==================================================>]     128B/128B
+ 5760334e16b5 Extracting [==================================================>]     128B/128B
+ 5760334e16b5 Pull complete 
+ b056e8cb2530 Extracting [==================================================>]     167B/167B
+ b056e8cb2530 Extracting [==================================================>]     167B/167B
+ b056e8cb2530 Pull complete 
+ 9bcbde3fb062 Extracting [==================================================>]  6.108kB/6.108kB
+ 9bcbde3fb062 Extracting [==================================================>]  6.108kB/6.108kB
+ 9bcbde3fb062 Pull complete 
+ 68d798fb46d0 Extracting [==================================================>]     184B/184B
+ 68d798fb46d0 Extracting [==================================================>]     184B/184B
+ 68d798fb46d0 Pull complete 
+ db Pulled 
+#1 [internal] load local bake definitions
+#1 reading from stdin 926B done
+#1 DONE 0.0s
+
+#2 [worker internal] load build definition from Dockerfile
+#2 transferring dockerfile: 314B done
+#2 DONE 0.0s
+
+#3 [auth] library/debian:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [auth] library/golang:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#5 [migrate internal] load metadata for docker.io/library/golang:1.23-bookworm
+#5 DONE 0.6s
+
+#6 [worker internal] load metadata for docker.io/library/debian:bookworm-slim
+#6 DONE 0.5s
+
+#7 [migrate internal] load .dockerignore
+#7 transferring context: 62B done
+#7 DONE 0.0s
+
+#8 [migrate internal] load build context
+#8 transferring context: 19.39kB done
+#8 DONE 0.0s
+
+#9 [worker stage-1 1/2] FROM docker.io/library/debian:bookworm-slim@sha256:734a72b3d6142a71993b4bc580ca01d8ca687f77a2c422d96a961d3376b179bc
+#9 resolve docker.io/library/debian:bookworm-slim@sha256:734a72b3d6142a71993b4bc580ca01d8ca687f77a2c422d96a961d3376b179bc done
+#9 sha256:734a72b3d6142a71993b4bc580ca01d8ca687f77a2c422d96a961d3376b179bc 5.65kB / 5.65kB done
+#9 sha256:c67e92c8099ba22853ab4cfda7cfb494d253d6012ca82dee98ba8976772af018 1.02kB / 1.02kB done
+#9 sha256:43f84a0b210f98845ef003912981774c95efe439eaa4b1cb62cf803fd46fc82a 453B / 453B done
+#9 DONE 0.0s
+
+#10 [worker build 1/6] FROM docker.io/library/golang:1.23-bookworm@sha256:167053a2bb901972bf2c1611f8f52c44d5fe7e762e5cab213708d82c421614db
+#10 resolve docker.io/library/golang:1.23-bookworm@sha256:167053a2bb901972bf2c1611f8f52c44d5fe7e762e5cab213708d82c421614db done
+#10 sha256:16c42bcc0084d3c7903067887c2674a5ee85b8b0d0278ca60c43d983154ed505 2.81kB / 2.81kB done
+#10 sha256:f014853ae2033c0e173500a9c5027c3ecffe2ffacbd09b789ac2f2dc63ddaa63 0B / 48.49MB 0.1s
+#10 sha256:16c42bcc0084d3c7903067887c2674a5ee85b8b0d0278ca60c43d983154ed505 2.81kB / 2.81kB done
+#10 sha256:f014853ae2033c0e173500a9c5027c3ecffe2ffacbd09b789ac2f2dc63ddaa63 17.83MB / 48.49MB 0.2s
+#10 sha256:e87b2a5f6df2dff71ea330d55d54f4979eb380ae58a7e3aabc9d53121243e689 2.32kB / 2.32kB done
+#10 sha256:6d6401b7636bba3fe2d916b154ba44abe2081a737e117b2c736167ca6ea42334 1.05MB / 24.02MB 0.2s
+#10 sha256:cffef7dc6f99e0837fd18f5ab2b363aff8d1c12ed377199f6d6478f80b458c05 0B / 64.40MB 0.2s
+#10 sha256:167053a2bb901972bf2c1611f8f52c44d5fe7e762e5cab213708d82c421614db 9.10kB / 9.10kB done
+#10 sha256:f014853ae2033c0e173500a9c5027c3ecffe2ffacbd09b789ac2f2dc63ddaa63 48.49MB / 48.49MB 0.3s
+#10 sha256:6d6401b7636bba3fe2d916b154ba44abe2081a737e117b2c736167ca6ea42334 24.02MB / 24.02MB 0.3s
+#10 sha256:cffef7dc6f99e0837fd18f5ab2b363aff8d1c12ed377199f6d6478f80b458c05 28.31MB / 64.40MB 0.3s
+#10 sha256:cffef7dc6f99e0837fd18f5ab2b363aff8d1c12ed377199f6d6478f80b458c05 64.40MB / 64.40MB 0.5s
+#10 sha256:f014853ae2033c0e173500a9c5027c3ecffe2ffacbd09b789ac2f2dc63ddaa63 48.49MB / 48.49MB 1.2s done
+#10 sha256:f014853ae2033c0e173500a9c5027c3ecffe2ffacbd09b789ac2f2dc63ddaa63 48.49MB / 48.49MB 1.2s done
+#10 sha256:6d6401b7636bba3fe2d916b154ba44abe2081a737e117b2c736167ca6ea42334 24.02MB / 24.02MB 1.6s done
+#10 sha256:d64c83132511ab5226f18a66abc03228a24fffcaf1ab1b4e9c9cdb64d16ad877 0B / 92.38MB 1.6s
+#10 sha256:d5791340ef181f05ef1e99760e4be81cb2008d99b2bc1e56b2faa9b6295d0ac3 0B / 74.07MB 1.6s
+#10 sha256:6d6401b7636bba3fe2d916b154ba44abe2081a737e117b2c736167ca6ea42334 24.02MB / 24.02MB 1.6s done
+#10 sha256:cffef7dc6f99e0837fd18f5ab2b363aff8d1c12ed377199f6d6478f80b458c05 64.40MB / 64.40MB 1.6s done
+#10 sha256:d64c83132511ab5226f18a66abc03228a24fffcaf1ab1b4e9c9cdb64d16ad877 6.29MB / 92.38MB 1.7s
+#10 sha256:d5791340ef181f05ef1e99760e4be81cb2008d99b2bc1e56b2faa9b6295d0ac3 15.73MB / 74.07MB 1.7s
+#10 extracting sha256:f014853ae2033c0e173500a9c5027c3ecffe2ffacbd09b789ac2f2dc63ddaa63 0.1s
+#10 sha256:01b3c4a0d5c8f9abfa7395525fc8c3e2d9b8d3fec47edaf0d9c58f6253797d34 0B / 125B 1.7s
+#10 sha256:d64c83132511ab5226f18a66abc03228a24fffcaf1ab1b4e9c9cdb64d16ad877 29.36MB / 92.38MB 1.8s
+#10 sha256:d5791340ef181f05ef1e99760e4be81cb2008d99b2bc1e56b2faa9b6295d0ac3 53.48MB / 74.07MB 1.8s
+#10 sha256:01b3c4a0d5c8f9abfa7395525fc8c3e2d9b8d3fec47edaf0d9c58f6253797d34 125B / 125B 1.7s done
+#10 sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 32B / 32B 1.8s
+#10 sha256:d64c83132511ab5226f18a66abc03228a24fffcaf1ab1b4e9c9cdb64d16ad877 92.38MB / 92.38MB 2.0s
+#10 sha256:d5791340ef181f05ef1e99760e4be81cb2008d99b2bc1e56b2faa9b6295d0ac3 74.07MB / 74.07MB 2.0s
+#10 sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 32B / 32B 1.8s done
+#10 extracting sha256:f014853ae2033c0e173500a9c5027c3ecffe2ffacbd09b789ac2f2dc63ddaa63 1.5s done
+#10 sha256:d5791340ef181f05ef1e99760e4be81cb2008d99b2bc1e56b2faa9b6295d0ac3 74.07MB / 74.07MB 2.9s done
+#10 sha256:d5791340ef181f05ef1e99760e4be81cb2008d99b2bc1e56b2faa9b6295d0ac3 74.07MB / 74.07MB 2.9s done
+#10 extracting sha256:6d6401b7636bba3fe2d916b154ba44abe2081a737e117b2c736167ca6ea42334
+#10 sha256:d64c83132511ab5226f18a66abc03228a24fffcaf1ab1b4e9c9cdb64d16ad877 92.38MB / 92.38MB 3.5s done
+#10 extracting sha256:6d6401b7636bba3fe2d916b154ba44abe2081a737e117b2c736167ca6ea42334 0.4s done
+#10 extracting sha256:cffef7dc6f99e0837fd18f5ab2b363aff8d1c12ed377199f6d6478f80b458c05
+#10 extracting sha256:cffef7dc6f99e0837fd18f5ab2b363aff8d1c12ed377199f6d6478f80b458c05 1.5s done
+#10 extracting sha256:d64c83132511ab5226f18a66abc03228a24fffcaf1ab1b4e9c9cdb64d16ad877
+#10 extracting sha256:d64c83132511ab5226f18a66abc03228a24fffcaf1ab1b4e9c9cdb64d16ad877 1.5s done
+#10 extracting sha256:d64c83132511ab5226f18a66abc03228a24fffcaf1ab1b4e9c9cdb64d16ad877 1.5s done
+#10 extracting sha256:d5791340ef181f05ef1e99760e4be81cb2008d99b2bc1e56b2faa9b6295d0ac3
+#10 extracting sha256:d5791340ef181f05ef1e99760e4be81cb2008d99b2bc1e56b2faa9b6295d0ac3 2.9s done
+#10 extracting sha256:01b3c4a0d5c8f9abfa7395525fc8c3e2d9b8d3fec47edaf0d9c58f6253797d34
+#10 extracting sha256:01b3c4a0d5c8f9abfa7395525fc8c3e2d9b8d3fec47edaf0d9c58f6253797d34 done
+#10 extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 done
+#10 DONE 20.6s
+
+#11 [migrate build 2/6] WORKDIR /src
+#11 DONE 0.0s
+
+#12 [migrate build 3/6] COPY go.mod go.sum ./
+#12 DONE 0.0s
+
+#13 [api build 4/6] RUN go mod download
+#13 DONE 0.3s
+
+#14 [api build 5/6] COPY *.go schema.sql ./
+#14 DONE 0.0s
+
+#15 [migrate build 6/6] RUN CGO_ENABLED=0 go build -mod=readonly -trimpath -o /queue .
+#15 DONE 13.2s
+
+#16 [api stage-1 2/2] COPY --from=build /queue /queue
+#16 DONE 0.1s
+
+#17 [migrate] exporting to image
+#17 exporting layers
+#17 exporting layers 0.5s done
+#17 writing image sha256:c8ab27f28dbefdc7c58b810e82bc73fd1b977671fcfe04af8b1dfc6f31b09437 done
+#17 naming to docker.io/library/soup-training-queue:local done
+#17 DONE 0.5s
+
+#18 [api] exporting to image
+#18 exporting layers 0.5s done
+#18 writing image sha256:c8ab27f28dbefdc7c58b810e82bc73fd1b977671fcfe04af8b1dfc6f31b09437 done
+#18 naming to docker.io/library/soup-training-queue:local done
+#18 DONE 0.5s
+
+#19 [worker] exporting to image
+#19 exporting layers 0.5s done
+#19 writing image sha256:c8ab27f28dbefdc7c58b810e82bc73fd1b977671fcfe04af8b1dfc6f31b09437 done
+#19 naming to docker.io/library/soup-training-queue:local done
+#19 DONE 0.5s
+
+#20 [api] resolving provenance for metadata file
+#20 DONE 0.0s
+
+#21 [worker] resolving provenance for metadata file
+#21 DONE 0.0s
+
+#22 [migrate] resolving provenance for metadata file
+#22 DONE 0.0s
+ worker  Built
+ api  Built
+ migrate  Built
+ Network soup_default  Creating
+ Network soup_default  Created
+ Volume "soup_queue_data"  Creating
+ Volume "soup_queue_data"  Created
+ Container soup-db-1  Creating
+ Container soup-db-1  Created
+ Container soup-migrate-1  Creating
+ Container soup-migrate-1  Created
+ Container soup-worker-4  Creating
+ Container soup-worker-1  Creating
+ Container soup-worker-2  Creating
+ Container soup-worker-3  Creating
+ Container soup-api-1  Creating
+ Container soup-api-1  Created
+ Container soup-worker-4  Created
+ Container soup-worker-1  Created
+ Container soup-worker-3  Created
+ Container soup-worker-2  Created
+ Container soup-db-1  Starting
+ Container soup-db-1  Started
+ Container soup-db-1  Waiting
+ Container soup-db-1  Healthy
+ Container soup-migrate-1  Starting
+ Container soup-migrate-1  Started
+ Container soup-migrate-1  Waiting
+ Container soup-migrate-1  Waiting
+ Container soup-migrate-1  Exited
+ Container soup-worker-3  Starting
+ Container soup-migrate-1  Exited
+ Container soup-api-1  Starting
+ Container soup-worker-3  Started
+ Container soup-worker-2  Starting
+ Container soup-api-1  Started
+ Container soup-worker-2  Started
+ Container soup-worker-1  Starting
+ Container soup-worker-1  Started
+ Container soup-worker-4  Starting
+ Container soup-worker-4  Started
+{"status":"ok"}
+
+START rate=100/s seconds=60 requests=6000 workers=4 mix=100% new creates work=20..40ms faults=none
+QUEUE elapsed=0.15s {'queued': 4, 'running': 2, 'succeeded': 8, 'other_terminal': 0, 'effects': 8}
+QUEUE elapsed=2.31s {'queued': 1, 'running': 3, 'succeeded': 226, 'other_terminal': 0, 'effects': 226}
+QUEUE elapsed=4.45s {'queued': 3, 'running': 4, 'succeeded': 437, 'other_terminal': 0, 'effects': 437}
+QUEUE elapsed=6.60s {'queued': 1, 'running': 4, 'succeeded': 654, 'other_terminal': 0, 'effects': 654}
+QUEUE elapsed=8.75s {'queued': 1, 'running': 2, 'succeeded': 871, 'other_terminal': 0, 'effects': 871}
+QUEUE elapsed=10.92s {'queued': 1, 'running': 4, 'succeeded': 1086, 'other_terminal': 0, 'effects': 1086}
+QUEUE elapsed=13.11s {'queued': 0, 'running': 4, 'succeeded': 1306, 'other_terminal': 0, 'effects': 1306}
+QUEUE elapsed=15.30s {'queued': 4, 'running': 4, 'succeeded': 1522, 'other_terminal': 0, 'effects': 1522}
+QUEUE elapsed=17.49s {'queued': 0, 'running': 4, 'succeeded': 1744, 'other_terminal': 0, 'effects': 1744}
+QUEUE elapsed=19.66s {'queued': 1, 'running': 3, 'succeeded': 1961, 'other_terminal': 0, 'effects': 1961}
+QUEUE elapsed=21.80s {'queued': 2, 'running': 3, 'succeeded': 2175, 'other_terminal': 0, 'effects': 2175}
+QUEUE elapsed=23.95s {'queued': 2, 'running': 4, 'succeeded': 2388, 'other_terminal': 0, 'effects': 2388}
+QUEUE elapsed=26.10s {'queued': 0, 'running': 3, 'succeeded': 2606, 'other_terminal': 0, 'effects': 2606}
+QUEUE elapsed=28.24s {'queued': 0, 'running': 3, 'succeeded': 2820, 'other_terminal': 0, 'effects': 2820}
+QUEUE elapsed=30.40s {'queued': 1, 'running': 3, 'succeeded': 3036, 'other_terminal': 0, 'effects': 3036}
+QUEUE elapsed=32.56s {'queued': 5, 'running': 4, 'succeeded': 3246, 'other_terminal': 0, 'effects': 3246}
+QUEUE elapsed=34.70s {'queued': 4, 'running': 3, 'succeeded': 3462, 'other_terminal': 0, 'effects': 3462}
+QUEUE elapsed=36.85s {'queued': 1, 'running': 2, 'succeeded': 3682, 'other_terminal': 0, 'effects': 3682}
+QUEUE elapsed=39.00s {'queued': 2, 'running': 2, 'succeeded': 3895, 'other_terminal': 0, 'effects': 3895}
+QUEUE elapsed=41.15s {'queued': 2, 'running': 4, 'succeeded': 4108, 'other_terminal': 0, 'effects': 4108}
+QUEUE elapsed=43.30s {'queued': 2, 'running': 4, 'succeeded': 4323, 'other_terminal': 0, 'effects': 4323}
+QUEUE elapsed=45.46s {'queued': 1, 'running': 3, 'succeeded': 4541, 'other_terminal': 0, 'effects': 4541}
+QUEUE elapsed=47.62s {'queued': 1, 'running': 3, 'succeeded': 4757, 'other_terminal': 0, 'effects': 4757}
+QUEUE elapsed=49.76s {'queued': 3, 'running': 4, 'succeeded': 4969, 'other_terminal': 0, 'effects': 4969}
+QUEUE elapsed=51.91s {'queued': 1, 'running': 4, 'succeeded': 5185, 'other_terminal': 0, 'effects': 5185}
+QUEUE elapsed=54.06s {'queued': 0, 'running': 3, 'succeeded': 5402, 'other_terminal': 0, 'effects': 5402}
+QUEUE elapsed=56.19s {'queued': 0, 'running': 3, 'succeeded': 5615, 'other_terminal': 0, 'effects': 5615}
+QUEUE elapsed=58.34s {'queued': 4, 'running': 2, 'succeeded': 5827, 'other_terminal': 0, 'effects': 5827}
+HTTP requested=6000 accepted=6000 distinct_ids=6000 errors=0 scheduled_rate=100.02/s
+LATENCY p50=1.12ms p95=3.07ms p99=12.63ms dispatch_lag_p99=0.94ms
+QUEUE peak_sampled_queued=5 first_queued=4 last_queued=4
+DRAIN elapsed=0.13s {'queued': 0, 'running': 0, 'succeeded': 6000, 'other_terminal': 0, 'effects': 6000}
+PASS fixed-rate workload and final counts
+NAME             IMAGE                       COMMAND                  SERVICE   CREATED              STATUS                          PORTS
+soup-api-1       soup-training-queue:local   "/queue api"             api       About a minute ago   Up About a minute               127.0.0.1:8080->8080/tcp
+soup-db-1        postgres:16-bookworm        "docker-entrypoint.s…"   db        About a minute ago   Up About a minute (healthy)     5432/tcp
+soup-migrate-1   soup-training-queue:local   "/queue migrate"         migrate   About a minute ago   Exited (0) About a minute ago   
+soup-worker-1    soup-training-queue:local   "/queue worker"          worker    About a minute ago   Up About a minute               
+soup-worker-2    soup-training-queue:local   "/queue worker"          worker    About a minute ago   Up About a minute               
+soup-worker-3    soup-training-queue:local   "/queue worker"          worker    About a minute ago   Up About a minute               
+soup-worker-4    soup-training-queue:local   "/queue worker"          worker    About a minute ago   Up About a minute               
+ Container soup-worker-4  Stopping
+ Container soup-api-1  Stopping
+ Container soup-worker-3  Stopping
+ Container soup-worker-2  Stopping
+ Container soup-worker-1  Stopping
+ Container soup-worker-4  Stopped
+ Container soup-worker-4  Removing
+ Container soup-worker-4  Removed
+ Container soup-worker-1  Stopped
+ Container soup-worker-1  Removing
+ Container soup-worker-1  Removed
+ Container soup-worker-3  Stopped
+ Container soup-worker-3  Removing
+ Container soup-worker-2  Stopped
+ Container soup-worker-2  Removing
+ Container soup-worker-3  Removed
+ Container soup-worker-2  Removed
+ Container soup-api-1  Stopped
+ Container soup-api-1  Removing
+ Container soup-api-1  Removed
+ Container soup-migrate-1  Stopping
+ Container soup-migrate-1  Stopped
+ Container soup-migrate-1  Removing
+ Container soup-migrate-1  Removed
+ Container soup-db-1  Stopping
+ Container soup-db-1  Stopped
+ Container soup-db-1  Removing
+ Container soup-db-1  Removed
+ Volume soup_queue_data  Removing
+ Network soup_default  Removing
+ Network soup_default  Removed
+ Volume soup_queue_data  Removed

@@ -79,14 +79,34 @@ Across 60,000 jobs, the harness recorded 117 worker kills and 93 jobs with a sec
 
 The [first local attempt](runs/run-20261110T081812Z-seed-42-GJtOTe.log) exited with code 127 because Docker was unavailable. It stopped before starting the harness. GitHub Actions provided the Linux environment used for the six completed runs.
 
+## Fixed-rate check at 100 requests/s
+
+The [fixed-rate workflow](https://github.com/AsatovDias/Soup/actions/runs/42796708735)
+sent 6,000 new create requests over 60 seconds to the default four-worker setup.
+Simulated job durations ranged from 20 to 40 ms. No workers were killed during
+this test. The client and the Compose stack ran on the same CI machine.
+
+| Metric | Observed |
+| --- | ---: |
+| Offered rate / accepted / HTTP errors | 100.02 requests/s / 6,000 / 0 |
+| Client HTTP latency p50 / p95 / p99 | 1.12 / 3.07 / 12.63 ms |
+| Client dispatch lag p99 | 0.94 ms |
+| Peak queued jobs in samples taken about every two seconds | 5 |
+| Terminal jobs / effects after drain | 6,000 / 6,000 |
+
+See the [raw output](runs/fixed-rate-42796708735.log). Run the **Fixed-rate queue
+check** workflow from the Actions tab to reproduce it. Locally, start
+`docker compose up -d --build` in a fresh Compose project with an empty
+database, then run `python3 -u rate.py` once the API is healthy.
+
 ## Production verdict
 
-**DON'T SHIP at 100 requests/s.** The chaos harness submits requests in parallel and measures whether the queue drains correctly. It does not drive a fixed arrival rate or measure API latency percentiles under sustained load. Worker capacity also depends on how many requests create jobs and how long they take. With four default workers and one-second jobs, the upper bound is about four completions per second before overhead. If all 100 requests/s create jobs of that duration, the queue grows by at least about 96 jobs/s.
+**DON'T SHIP at 100 requests/s for the full supported workload.** The four-worker setup handled the one-minute fixed-rate check for short simulated jobs. With one-second jobs, those same workers can complete at most about four jobs per second before overhead. If all 100 requests/s create jobs of that duration, the queue grows by at least about 96 jobs/s. The fixed-rate check also leaves recovery at a steady arrival rate unmeasured.
 
-The first production change would be to bound intake based on worker capacity and expose oldest queued job age. Before raising that bound, run a fixed-rate test at 100 requests/s with the intended mix of creates, retries, reads and cancels and a representative job-duration distribution. Compare error rate, p95/p99 latency, queue age and recovery after worker kills against explicit targets.
+First, cap accepted work based on worker capacity and expose the age of the oldest queued job. Before raising that cap, run a longer fixed-rate test with the expected mix of creates, retries, reads and cancels, a representative job-duration distribution and worker kills. Compare error rate, p95/p99 latency, queue age and recovery against explicit targets.
 
 ## Reflection and AI use
 
-The surprising case was an expired worker returning before any replacement had claimed its job. The attempt number is still current in that window, so a token check alone would let it publish. The completion transaction also checks the lease against PostgreSQL time after acquiring the row lock. The remaining concern is whether contention during sustained intake will delay completion enough to expire healthy leases, especially once job durations vary beyond the short simulation.
+The case that surprised me most was a worker returning after its lease expired, before another worker had picked up the job. Its attempt number would still match. A check of that number alone would let it publish, so the completion transaction checks both the attempt and the lease after locking the row. My main remaining concern is what happens when jobs get longer or the database is under contention. The short simulated jobs give us a reproducible workload, but they cannot tell us how quickly a real training queue will recover under load.
 
-Codex drafted the design, implementation, probes, harness and CI. The design uses its suggestions for row locks, per-attempt fencing and an effect committed with the final state. Codex checked the Compose and workflow configuration, examined the six audits, and archived the raw logs. The manual workflow run was triggered from the GitHub UI.
+I used Codex to generate the initial design, Go implementation, and test harness. I kept its suggestions to use PostgreSQL row locks, track claims with attempt numbers, and commit the effect and final state together. I chose GitHub Actions because I didn't have Docker on my laptop. I triggered the workflow myself and checked that all three jobs in that run passed and produced log artifacts. Codex reviewed and archived the raw logs from both chaos workflows and added the fixed-rate check.
