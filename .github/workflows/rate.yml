@@ -1,0 +1,41 @@
+name: Fixed-rate queue check
+
+on:
+  push:
+    branches: [benchmark]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run the 100 requests per second workload
+        shell: bash
+        run: |
+          log_dir="$RUNNER_TEMP/queue-rate"
+          mkdir -p "$log_dir"
+          (
+            trap 'docker compose ps -a; docker compose down -v' EXIT
+            docker compose up -d --build
+            for ((i=0; i<30; i++)); do
+              if curl -fsS --max-time 2 http://127.0.0.1:8080/healthz; then
+                echo
+                break
+              fi
+              sleep 1
+            done
+            test "$(docker compose ps -q worker | wc -l)" -eq 4
+            python3 -u rate.py
+          ) 2>&1 | tee "$log_dir/fixed-rate-${GITHUB_RUN_ID}.log"
+      - name: Save raw output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fixed-rate-log
+          path: ${{ runner.temp }}/queue-rate/*.log
+          if-no-files-found: error
