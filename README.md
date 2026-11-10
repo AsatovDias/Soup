@@ -1,6 +1,8 @@
 # Soup training job queue
 
-Go HTTP API, PostgreSQL, and four separate worker processes by default. The design is in [DESIGN.md](DESIGN.md).
+A Go HTTP API backed by PostgreSQL with four independent workers by default. A worker can retry a job after its lease expires. Each successful job commits exactly one simulated effect in the same transaction as its final state. See [DESIGN.md](DESIGN.md) for the claim, cancellation and recovery rules.
+
+**Results:** 6 of 6 chaos runs passed, with 10,000 jobs and eight workers in each. The [raw logs](runs/) include the earlier startup failure.
 
 ## Start
 
@@ -32,9 +34,8 @@ The [Queue checks workflow](.github/workflows/chaos.yml) runs on a push to
 `main` and can also be started from **Actions → Queue checks → Run workflow**.
 The three seeds run independently. Each job builds the image, runs the database
 probes and starts eight workers for the chaos test. Its `queue-logs-seed-*`
-artifact contains the raw runner log, including on test failure. Download all
-three artifacts from the run summary, keep each new log in `runs/`, and record
-the pass/fail counts before submission.
+artifact contains the raw runner log, including on test failure. The logs used
+for this report are also committed under [runs/](runs/).
 
 ### Local Docker
 
@@ -46,7 +47,9 @@ Run on a Linux environment with Docker Compose v2, Bash, curl and Python 3. The 
 ./run-checks.sh 2026
 ```
 
-Each invocation creates a new file in [runs/](runs/) containing stdout and stderr. A run started by the harness prints `START` and a successful one ends with `PASS all invariants and pagination` before cleanup. Use seeds to reproduce the victim selection sequence. Thread and process timing will vary.
+Each invocation creates a new file in [runs/](runs/) containing stdout and stderr. The harness prints `START` when it begins and `PASS all invariants and pagination` when its checks finish successfully. Seeds make victim selection reproducible for a given worker list and number of kills. Thread and process timing still varies.
+
+## Failure checks
 
 | Silent failure | How the code checks it |
 | --- | --- |
@@ -57,16 +60,33 @@ Each invocation creates a new file in [runs/](runs/) containing stdout and stder
 | Isolation level | The probe checks the session is READ COMMITTED. The second statement after an idempotency conflict uses a fresh snapshot. |
 | Clock skew | Claim and completion SQL refer to PostgreSQL time. The probe moves the lease across the database's current time and exercises the expiry decision. The test does not alter system clocks. |
 
-The harness checks that every acknowledged key and ID survives, that all jobs reach terminal states, and that effects match successful jobs and the winning attempt. It requires evidence of at least one reclaim after worker kills. It does not simulate a PostgreSQL outage, failover, disk exhaustion, a database clock jump, an external side effect, or every possible ordering around COMMIT. It also does not measure sustained throughput at a fixed arrival rate. The deterministic probes isolate a few failure sequences that random kills alone may miss.
+The harness checks that every acknowledged key and ID survives, that all jobs reach terminal states, and that effects match successful jobs and the winning attempt. The six runs used jobs lasting 20–40 ms, a concurrent replay for every key, and a cancellation request for every fourth job. It requires evidence of at least one reclaim after worker kills. It does not simulate a PostgreSQL outage, failover, disk exhaustion, a database clock jump, an external side effect, or every possible ordering around COMMIT. It also does not measure sustained throughput at a fixed arrival rate. The deterministic probes isolate a few failure sequences that random kills alone may miss.
 
-## Evidence and verdict
+## Run results
 
-**DON'T SHIP at 100 requests/s.** Zero completed chaos runs and one startup attempt. The supplied raw output records Docker being unavailable. No database or worker behavior, Go build, or 100 requests/s result has been verified in this environment.
+**Six completed chaos runs passed.** The [push run](https://github.com/AsatovDias/Soup/actions/runs/42792793581) and the [manual run](https://github.com/AsatovDias/Soup/actions/runs/42793129016) each used three seeds. Each row links to the original runner log. Time covers the harness, including submission, drain and the database audit.
 
-First, run the probes and the three recorded seeds on a machine with Docker. Then measure a sustained, fixed rate of 100 requests/s with a stated mix of creates, retries, reads, and cancels, both with and without worker kills. Record latency percentiles, HTTP errors, queue depth, oldest queued job age, recovery time and database saturation. If requests can all create one-second jobs, eight workers can complete at most about eight such jobs per second before overhead, so the first production capacity fix would be to bound intake or raise processing capacity for that workload.
+| Workflow | Seed and raw log | Worker kills | Jobs reclaimed | Succeeded / effects | Failed jobs | Cancelled jobs | Time |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| #1 | [42](runs/run-20261110T094124Z-seed-42-7qW3Nh.log) | 17 | 14 | 7060 / 7060 | 441 | 2499 | 48.00 s |
+| #1 | [731](runs/run-20261110T094124Z-seed-731-nLfI8t.log) | 18 | 16 | 7059 / 7059 | 441 | 2500 | 51.02 s |
+| #1 | [2026](runs/run-20261110T094125Z-seed-2026-jixDYC.log) | 20 | 14 | 7060 / 7060 | 441 | 2499 | 65.24 s |
+| #2 | [42](runs/run-20261110T094358Z-seed-42-8yxruZ.log) | 17 | 15 | 7060 / 7060 | 441 | 2499 | 44.51 s |
+| #2 | [731](runs/run-20261110T094352Z-seed-731-wbr5Zp.log) | 24 | 16 | 7059 / 7059 | 442 | 2499 | 75.56 s |
+| #2 | [2026](runs/run-20261110T094352Z-seed-2026-rMk55y.log) | 21 | 18 | 7062 / 7062 | 442 | 2496 | 61.69 s |
+
+Across 60,000 jobs, the harness recorded 117 worker kills and 93 jobs with a second or later claim. All 42,360 successful jobs had exactly one effect. Every other job had zero effects. The failed jobs in the table are intentional simulated failures that reached their expected terminal state. The harness found no missing jobs, duplicate effects, or jobs left queued or running.
+
+The [first local attempt](runs/run-20261110T081812Z-seed-42-GJtOTe.log) exited with code 127 because Docker was unavailable. It stopped before starting the harness. GitHub Actions provided the Linux environment used for the six completed runs.
+
+## Production verdict
+
+**DON'T SHIP at 100 requests/s.** The chaos harness submits requests in parallel and measures whether the queue drains correctly. It does not drive a fixed arrival rate or measure API latency percentiles under sustained load. Worker capacity also depends on how many requests create jobs and how long they take. With four default workers and one-second jobs, the upper bound is about four completions per second before overhead. If all 100 requests/s create jobs of that duration, the queue grows by at least about 96 jobs/s.
+
+The first production change would be to bound intake based on worker capacity and expose oldest queued job age. Before raising that bound, run a fixed-rate test at 100 requests/s with the intended mix of creates, retries, reads and cancels and a representative job-duration distribution. Compare error rate, p95/p99 latency, queue age and recovery after worker kills against explicit targets.
 
 ## Reflection and AI use
 
-The design review surfaced a subtle expiry window. Checking only the attempt number would let a worker with an expired lease complete while no replacement had claimed the job. Completion therefore checks the lease after locking the row. The main open concern is whether PostgreSQL contention under the intended request mix delays claims and completion enough to create lease churn. The supplied run could not reach that point.
+The surprising case was an expired worker returning before any replacement had claimed its job. The attempt number is still current in that window, so a token check alone would let it publish. The completion transaction also checks the lease against PostgreSQL time after acquiring the row lock. The remaining concern is whether contention during sustained intake will delay completion enough to expire healthy leases, especially once job durations vary beyond the short simulation.
 
-Codex assisted with the design note, Go code, Compose setup, probes, harness, and this draft. The design adopted its suggestions to use row locks, fencing tokens and an effect in the completion transaction. Codex ran shell and Python syntax checks, parsed the Compose YAML, and preserved the startup failure. Candidate verification and any changes or conclusions from local runs should be recorded here before submission.
+Codex drafted the design, implementation, probes, harness and CI. The design uses its suggestions for row locks, per-attempt fencing and an effect committed with the final state. Codex checked the Compose and workflow configuration, examined the six audits, and archived the raw logs. The manual workflow run was triggered from the GitHub UI.

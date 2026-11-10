@@ -1,0 +1,528 @@
+BEGIN seed=731 project=soupcheck20261110t094352zwbr5zp port=18080
+Docker Compose version v2.38.2
+Client: Docker Engine - Community
+ Version:           28.0.4
+ API version:       1.48
+ Go version:        go1.23.7
+ Git commit:        b8034c0
+ Built:             Tue Mar 25 15:07:16 2025
+ OS/Arch:           linux/amd64
+ Context:           default
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          28.0.4
+  API version:      1.48 (minimum version 1.24)
+  Go version:       go1.23.7
+  Git commit:       6430e49
+  Built:            Tue Mar 25 15:07:16 2025
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          v2.4.2
+  GitCommit:        b7a25261e029d68978bbf290df0a62fc819b3c51
+ runc:
+  Version:          1.5.2
+  GitCommit:        v1.5.2-0-g29dd3dc2
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+ db Pulling 
+ dd051e1b8c92 Pulling fs layer 
+ ffef70d379d2 Pulling fs layer 
+ 136766c05e5f Pulling fs layer 
+ 2a13757dbdad Pulling fs layer 
+ 61b3cc329be3 Pulling fs layer 
+ cda6e21da0f2 Pulling fs layer 
+ a8c21670182b Pulling fs layer 
+ fce9821bac7d Pulling fs layer 
+ 1d919c5645b1 Pulling fs layer 
+ 27df7b5bf0b5 Pulling fs layer 
+ 5760334e16b5 Pulling fs layer 
+ b056e8cb2530 Pulling fs layer 
+ 9bcbde3fb062 Pulling fs layer 
+ 68d798fb46d0 Pulling fs layer 
+ fce9821bac7d Waiting 
+ 1d919c5645b1 Waiting 
+ 27df7b5bf0b5 Waiting 
+ 5760334e16b5 Waiting 
+ b056e8cb2530 Waiting 
+ 9bcbde3fb062 Waiting 
+ 68d798fb46d0 Waiting 
+ 61b3cc329be3 Waiting 
+ cda6e21da0f2 Waiting 
+ a8c21670182b Waiting 
+ 2a13757dbdad Waiting 
+ 136766c05e5f Downloading [>                                                  ]  48.55kB/4.534MB
+ ffef70d379d2 Downloading [==================================================>]  1.166kB/1.166kB
+ ffef70d379d2 Verifying Checksum 
+ ffef70d379d2 Download complete 
+ dd051e1b8c92 Downloading [>                                                  ]  294.3kB/28.25MB
+ 136766c05e5f Download complete 
+ dd051e1b8c92 Verifying Checksum 
+ dd051e1b8c92 Download complete 
+ dd051e1b8c92 Extracting [>                                                  ]  294.9kB/28.25MB
+ 2a13757dbdad Downloading [>                                                  ]  15.79kB/1.25MB
+ 2a13757dbdad Verifying Checksum 
+ 2a13757dbdad Download complete 
+ dd051e1b8c92 Extracting [========>                                          ]  4.719MB/28.25MB
+ 61b3cc329be3 Downloading [>                                                  ]  81.92kB/8.066MB
+ cda6e21da0f2 Downloading [>                                                  ]  15.79kB/1.196MB
+ cda6e21da0f2 Verifying Checksum 
+ cda6e21da0f2 Download complete 
+ a8c21670182b Downloading [==================================================>]     116B/116B
+ a8c21670182b Verifying Checksum 
+ a8c21670182b Download complete 
+ 61b3cc329be3 Downloading [=======================================>           ]  6.421MB/8.066MB
+ 61b3cc329be3 Verifying Checksum 
+ 61b3cc329be3 Download complete 
+ dd051e1b8c92 Extracting [================>                                  ]  9.142MB/28.25MB
+ dd051e1b8c92 Extracting [======================>                            ]  12.98MB/28.25MB
+ fce9821bac7d Downloading [==================================================>]  3.145kB/3.145kB
+ fce9821bac7d Verifying Checksum 
+ fce9821bac7d Download complete 
+ 27df7b5bf0b5 Downloading [=================>                                 ]  3.501kB/10.02kB
+ 27df7b5bf0b5 Downloading [==================================================>]  10.02kB/10.02kB
+ 27df7b5bf0b5 Download complete 
+ 1d919c5645b1 Downloading [>                                                  ]  538.5kB/111.8MB
+ dd051e1b8c92 Extracting [===================================>               ]  20.05MB/28.25MB
+ b056e8cb2530 Downloading [==================================================>]     167B/167B
+ b056e8cb2530 Verifying Checksum 
+ b056e8cb2530 Download complete 
+ 5760334e16b5 Downloading [==================================================>]     128B/128B
+ 5760334e16b5 Verifying Checksum 
+ 5760334e16b5 Download complete 
+ 1d919c5645b1 Downloading [========>                                          ]  19.19MB/111.8MB
+ dd051e1b8c92 Extracting [=========================================>         ]  23.59MB/28.25MB
+ 1d919c5645b1 Downloading [======================>                            ]  49.41MB/111.8MB
+ dd051e1b8c92 Extracting [==========================================>        ]  23.89MB/28.25MB
+ 68d798fb46d0 Downloading [==================================================>]     184B/184B
+ 68d798fb46d0 Verifying Checksum 
+ 68d798fb46d0 Download complete 
+ 9bcbde3fb062 Downloading [============================>                      ]  3.502kB/6.108kB
+ 9bcbde3fb062 Downloading [==================================================>]  6.108kB/6.108kB
+ 9bcbde3fb062 Verifying Checksum 
+ 9bcbde3fb062 Download complete 
+ 1d919c5645b1 Downloading [=====================================>             ]  82.81MB/111.8MB
+ dd051e1b8c92 Extracting [===============================================>   ]  26.84MB/28.25MB
+ 1d919c5645b1 Verifying Checksum 
+ 1d919c5645b1 Download complete 
+ dd051e1b8c92 Extracting [================================================>  ]  27.43MB/28.25MB
+ dd051e1b8c92 Extracting [==================================================>]  28.25MB/28.25MB
+ dd051e1b8c92 Pull complete 
+ ffef70d379d2 Extracting [==================================================>]  1.166kB/1.166kB
+ ffef70d379d2 Extracting [==================================================>]  1.166kB/1.166kB
+ ffef70d379d2 Pull complete 
+ 136766c05e5f Extracting [>                                                  ]  65.54kB/4.534MB
+ 136766c05e5f Extracting [==================================================>]  4.534MB/4.534MB
+ 136766c05e5f Pull complete 
+ 2a13757dbdad Extracting [=>                                                 ]  32.77kB/1.25MB
+ 2a13757dbdad Extracting [==================================================>]   1.25MB/1.25MB
+ 2a13757dbdad Pull complete 
+ 61b3cc329be3 Extracting [>                                                  ]   98.3kB/8.066MB
+ 61b3cc329be3 Extracting [====================>                              ]  3.342MB/8.066MB
+ 61b3cc329be3 Extracting [====================================>              ]  5.898MB/8.066MB
+ 61b3cc329be3 Extracting [==================================================>]  8.066MB/8.066MB
+ 61b3cc329be3 Pull complete 
+ cda6e21da0f2 Extracting [=>                                                 ]  32.77kB/1.196MB
+ cda6e21da0f2 Extracting [==================================================>]  1.196MB/1.196MB
+ cda6e21da0f2 Extracting [==================================================>]  1.196MB/1.196MB
+ cda6e21da0f2 Pull complete 
+ a8c21670182b Extracting [==================================================>]     116B/116B
+ a8c21670182b Extracting [==================================================>]     116B/116B
+ a8c21670182b Pull complete 
+ fce9821bac7d Extracting [==================================================>]  3.145kB/3.145kB
+ fce9821bac7d Extracting [==================================================>]  3.145kB/3.145kB
+ fce9821bac7d Pull complete 
+ 1d919c5645b1 Extracting [>                                                  ]  557.1kB/111.8MB
+ 1d919c5645b1 Extracting [===>                                               ]  7.799MB/111.8MB
+ 1d919c5645b1 Extracting [=====>                                             ]   11.7MB/111.8MB
+ 1d919c5645b1 Extracting [=======>                                           ]  16.15MB/111.8MB
+ 1d919c5645b1 Extracting [=========>                                         ]  21.73MB/111.8MB
+ 1d919c5645b1 Extracting [============>                                      ]  28.97MB/111.8MB
+ 1d919c5645b1 Extracting [================>                                  ]  37.32MB/111.8MB
+ 1d919c5645b1 Extracting [====================>                              ]  45.68MB/111.8MB
+ 1d919c5645b1 Extracting [=======================>                           ]  53.48MB/111.8MB
+ 1d919c5645b1 Extracting [==========================>                        ]  58.49MB/111.8MB
+ 1d919c5645b1 Extracting [=============================>                     ]  65.18MB/111.8MB
+ 1d919c5645b1 Extracting [=================================>                 ]  74.09MB/111.8MB
+ 1d919c5645b1 Extracting [====================================>              ]  81.33MB/111.8MB
+ 1d919c5645b1 Extracting [========================================>          ]  89.69MB/111.8MB
+ 1d919c5645b1 Extracting [==========================================>        ]  95.81MB/111.8MB
+ 1d919c5645b1 Extracting [============================================>      ]  99.71MB/111.8MB
+ 1d919c5645b1 Extracting [==============================================>    ]  103.6MB/111.8MB
+ 1d919c5645b1 Extracting [===============================================>   ]  106.4MB/111.8MB
+ 1d919c5645b1 Extracting [================================================>  ]  108.6MB/111.8MB
+ 1d919c5645b1 Extracting [=================================================> ]  110.3MB/111.8MB
+ 1d919c5645b1 Extracting [==================================================>]  111.8MB/111.8MB
+ 1d919c5645b1 Pull complete 
+ 27df7b5bf0b5 Extracting [==================================================>]  10.02kB/10.02kB
+ 27df7b5bf0b5 Extracting [==================================================>]  10.02kB/10.02kB
+ 27df7b5bf0b5 Pull complete 
+ 5760334e16b5 Extracting [==================================================>]     128B/128B
+ 5760334e16b5 Extracting [==================================================>]     128B/128B
+ 5760334e16b5 Pull complete 
+ b056e8cb2530 Extracting [==================================================>]     167B/167B
+ b056e8cb2530 Extracting [==================================================>]     167B/167B
+ b056e8cb2530 Pull complete 
+ 9bcbde3fb062 Extracting [==================================================>]  6.108kB/6.108kB
+ 9bcbde3fb062 Extracting [==================================================>]  6.108kB/6.108kB
+ 9bcbde3fb062 Pull complete 
+ 68d798fb46d0 Extracting [==================================================>]     184B/184B
+ 68d798fb46d0 Extracting [==================================================>]     184B/184B
+ 68d798fb46d0 Pull complete 
+ db Pulled 
+#1 [internal] load local bake definitions
+#1 reading from stdin 926B done
+#1 DONE 0.0s
+
+#2 [worker internal] load build definition from Dockerfile
+#2 transferring dockerfile: 314B done
+#2 DONE 0.0s
+
+#3 [auth] library/golang:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [auth] library/debian:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#5 [worker internal] load metadata for docker.io/library/golang:1.23-bookworm
+#5 DONE 0.6s
+
+#6 [migrate internal] load metadata for docker.io/library/debian:bookworm-slim
+#6 DONE 0.5s
+
+#7 [worker internal] load .dockerignore
+#7 transferring context: 62B done
+#7 DONE 0.0s
+
+#8 [api stage-1 1/2] FROM docker.io/library/debian:bookworm-slim@sha256:734a72b3d6142a71993b4bc580ca01d8ca687f77a2c422d96a961d3376b179bc
+#8 resolve docker.io/library/debian:bookworm-slim@sha256:734a72b3d6142a71993b4bc580ca01d8ca687f77a2c422d96a961d3376b179bc done
+#8 sha256:c67e92c8099ba22853ab4cfda7cfb494d253d6012ca82dee98ba8976772af018 1.02kB / 1.02kB done
+#8 sha256:43f84a0b210f98845ef003912981774c95efe439eaa4b1cb62cf803fd46fc82a 453B / 453B done
+#8 sha256:734a72b3d6142a71993b4bc580ca01d8ca687f77a2c422d96a961d3376b179bc 5.65kB / 5.65kB done
+#8 DONE 0.0s
+
+#9 [migrate internal] load build context
+#9 transferring context: 19.39kB done
+#9 DONE 0.0s
+
+#10 [api build 1/6] FROM docker.io/library/golang:1.23-bookworm@sha256:167053a2bb901972bf2c1611f8f52c44d5fe7e762e5cab213708d82c421614db
+#10 resolve docker.io/library/golang:1.23-bookworm@sha256:167053a2bb901972bf2c1611f8f52c44d5fe7e762e5cab213708d82c421614db done
+#10 sha256:e87b2a5f6df2dff71ea330d55d54f4979eb380ae58a7e3aabc9d53121243e689 2.32kB / 2.32kB done
+#10 sha256:16c42bcc0084d3c7903067887c2674a5ee85b8b0d0278ca60c43d983154ed505 2.81kB / 2.81kB done
+#10 sha256:f014853ae2033c0e173500a9c5027c3ecffe2ffacbd09b789ac2f2dc63ddaa63 44.04MB / 48.49MB 0.2s
+#10 sha256:167053a2bb901972bf2c1611f8f52c44d5fe7e762e5cab213708d82c421614db 9.10kB / 9.10kB done
+#10 sha256:6d6401b7636bba3fe2d916b154ba44abe2081a737e117b2c736167ca6ea42334 1.05MB / 24.02MB 0.2s
+#10 sha256:cffef7dc6f99e0837fd18f5ab2b363aff8d1c12ed377199f6d6478f80b458c05 0B / 64.40MB 0.2s
+#10 sha256:f014853ae2033c0e173500a9c5027c3ecffe2ffacbd09b789ac2f2dc63ddaa63 48.49MB / 48.49MB 0.4s
+#10 sha256:6d6401b7636bba3fe2d916b154ba44abe2081a737e117b2c736167ca6ea42334 24.02MB / 24.02MB 0.4s
+#10 sha256:cffef7dc6f99e0837fd18f5ab2b363aff8d1c12ed377199f6d6478f80b458c05 64.40MB / 64.40MB 0.4s
+#10 sha256:f014853ae2033c0e173500a9c5027c3ecffe2ffacbd09b789ac2f2dc63ddaa63 48.49MB / 48.49MB 0.7s done
+#10 extracting sha256:f014853ae2033c0e173500a9c5027c3ecffe2ffacbd09b789ac2f2dc63ddaa63
+#10 sha256:6d6401b7636bba3fe2d916b154ba44abe2081a737e117b2c736167ca6ea42334 24.02MB / 24.02MB 1.5s done
+#10 sha256:cffef7dc6f99e0837fd18f5ab2b363aff8d1c12ed377199f6d6478f80b458c05 64.40MB / 64.40MB 1.8s done
+#10 sha256:d64c83132511ab5226f18a66abc03228a24fffcaf1ab1b4e9c9cdb64d16ad877 0B / 92.38MB 1.8s
+#10 sha256:01b3c4a0d5c8f9abfa7395525fc8c3e2d9b8d3fec47edaf0d9c58f6253797d34 0B / 125B 1.8s
+#10 sha256:d5791340ef181f05ef1e99760e4be81cb2008d99b2bc1e56b2faa9b6295d0ac3 0B / 74.07MB 1.8s
+#10 sha256:d64c83132511ab5226f18a66abc03228a24fffcaf1ab1b4e9c9cdb64d16ad877 8.39MB / 92.38MB 1.9s
+#10 sha256:d5791340ef181f05ef1e99760e4be81cb2008d99b2bc1e56b2faa9b6295d0ac3 14.68MB / 74.07MB 1.9s
+#10 sha256:d64c83132511ab5226f18a66abc03228a24fffcaf1ab1b4e9c9cdb64d16ad877 46.14MB / 92.38MB 2.0s
+#10 sha256:01b3c4a0d5c8f9abfa7395525fc8c3e2d9b8d3fec47edaf0d9c58f6253797d34 125B / 125B 1.9s done
+#10 sha256:d5791340ef181f05ef1e99760e4be81cb2008d99b2bc1e56b2faa9b6295d0ac3 50.33MB / 74.07MB 2.0s
+#10 sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 32B / 32B 2.0s done
+#10 sha256:d64c83132511ab5226f18a66abc03228a24fffcaf1ab1b4e9c9cdb64d16ad877 92.38MB / 92.38MB 2.2s
+#10 sha256:d5791340ef181f05ef1e99760e4be81cb2008d99b2bc1e56b2faa9b6295d0ac3 74.07MB / 74.07MB 2.2s
+#10 extracting sha256:f014853ae2033c0e173500a9c5027c3ecffe2ffacbd09b789ac2f2dc63ddaa63 1.7s done
+#10 extracting sha256:6d6401b7636bba3fe2d916b154ba44abe2081a737e117b2c736167ca6ea42334
+#10 sha256:d64c83132511ab5226f18a66abc03228a24fffcaf1ab1b4e9c9cdb64d16ad877 92.38MB / 92.38MB 3.7s done
+#10 sha256:d5791340ef181f05ef1e99760e4be81cb2008d99b2bc1e56b2faa9b6295d0ac3 74.07MB / 74.07MB 3.7s done
+#10 extracting sha256:6d6401b7636bba3fe2d916b154ba44abe2081a737e117b2c736167ca6ea42334 0.5s done
+#10 extracting sha256:cffef7dc6f99e0837fd18f5ab2b363aff8d1c12ed377199f6d6478f80b458c05
+#10 extracting sha256:cffef7dc6f99e0837fd18f5ab2b363aff8d1c12ed377199f6d6478f80b458c05 1.9s done
+#10 extracting sha256:d64c83132511ab5226f18a66abc03228a24fffcaf1ab1b4e9c9cdb64d16ad877
+#10 extracting sha256:d64c83132511ab5226f18a66abc03228a24fffcaf1ab1b4e9c9cdb64d16ad877 1.8s done
+#10 extracting sha256:d64c83132511ab5226f18a66abc03228a24fffcaf1ab1b4e9c9cdb64d16ad877 1.8s done
+#10 extracting sha256:d5791340ef181f05ef1e99760e4be81cb2008d99b2bc1e56b2faa9b6295d0ac3
+#10 extracting sha256:d5791340ef181f05ef1e99760e4be81cb2008d99b2bc1e56b2faa9b6295d0ac3 3.5s done
+#10 extracting sha256:01b3c4a0d5c8f9abfa7395525fc8c3e2d9b8d3fec47edaf0d9c58f6253797d34
+#10 extracting sha256:01b3c4a0d5c8f9abfa7395525fc8c3e2d9b8d3fec47edaf0d9c58f6253797d34 done
+#10 extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 done
+#10 DONE 22.2s
+
+#11 [worker build 2/6] WORKDIR /src
+#11 DONE 0.0s
+
+#12 [api build 3/6] COPY go.mod go.sum ./
+#12 DONE 0.0s
+
+#13 [migrate build 4/6] RUN go mod download
+#13 DONE 0.4s
+
+#14 [migrate build 5/6] COPY *.go schema.sql ./
+#14 DONE 0.0s
+
+#15 [api build 6/6] RUN CGO_ENABLED=0 go build -mod=readonly -trimpath -o /queue .
+#15 DONE 15.7s
+
+#16 [worker stage-1 2/2] COPY --from=build /queue /queue
+#16 DONE 0.1s
+
+#17 [api] exporting to image
+#17 exporting layers
+#17 ...
+
+#18 [migrate] exporting to image
+#18 exporting layers 1.0s done
+#18 writing image sha256:4aff400526d8cc44a60f459b7a7705e26a4846df28a91b2b56460d841775aa31 done
+#18 naming to docker.io/library/soup-training-queue:local done
+#18 DONE 1.0s
+
+#17 [api] exporting to image
+#17 exporting layers 1.0s done
+#17 writing image sha256:4aff400526d8cc44a60f459b7a7705e26a4846df28a91b2b56460d841775aa31 done
+#17 naming to docker.io/library/soup-training-queue:local done
+#17 DONE 1.2s
+
+#19 [worker] exporting to image
+#19 exporting layers 1.0s done
+#19 writing image sha256:4aff400526d8cc44a60f459b7a7705e26a4846df28a91b2b56460d841775aa31 done
+#19 naming to docker.io/library/soup-training-queue:local done
+#19 DONE 1.2s
+
+#20 [migrate] resolving provenance for metadata file
+#20 DONE 0.0s
+
+#21 [worker] resolving provenance for metadata file
+#21 DONE 0.0s
+
+#22 [api] resolving provenance for metadata file
+#22 DONE 0.0s
+ migrate  Built
+ worker  Built
+ api  Built
+ Network soupcheck20261110t094352zwbr5zp_default  Creating
+ Network soupcheck20261110t094352zwbr5zp_default  Created
+ Volume "soupcheck20261110t094352zwbr5zp_queue_data"  Creating
+ Volume "soupcheck20261110t094352zwbr5zp_queue_data"  Created
+ Container soupcheck20261110t094352zwbr5zp-db-1  Creating
+ Container soupcheck20261110t094352zwbr5zp-db-1  Created
+ Container soupcheck20261110t094352zwbr5zp-migrate-1  Creating
+ Container soupcheck20261110t094352zwbr5zp-migrate-1  Created
+ Container soupcheck20261110t094352zwbr5zp-api-1  Creating
+ Container soupcheck20261110t094352zwbr5zp-api-1  Created
+ Container soupcheck20261110t094352zwbr5zp-db-1  Starting
+ Container soupcheck20261110t094352zwbr5zp-db-1  Started
+ Container soupcheck20261110t094352zwbr5zp-db-1  Waiting
+ Container soupcheck20261110t094352zwbr5zp-db-1  Healthy
+ Container soupcheck20261110t094352zwbr5zp-migrate-1  Starting
+ Container soupcheck20261110t094352zwbr5zp-migrate-1  Started
+ Container soupcheck20261110t094352zwbr5zp-migrate-1  Waiting
+ Container soupcheck20261110t094352zwbr5zp-migrate-1  Waiting
+ Container soupcheck20261110t094352zwbr5zp-migrate-1  Exited
+ Container soupcheck20261110t094352zwbr5zp-migrate-1  Exited
+ Container soupcheck20261110t094352zwbr5zp-api-1  Starting
+ Container soupcheck20261110t094352zwbr5zp-api-1  Started
+2026/11/10 09:44:50.776829 PASS transaction isolation=read committed
+2026/11/10 09:44:50.784904 PASS locked row skipped and unexpired claim remains exclusive
+2026/11/10 09:44:50.788235 PASS database-time expiry and stale attempt fencing
+2026/11/10 09:44:50.790765 PASS cancel/complete ordering cancel_first=true final=cancelled
+2026/11/10 09:44:50.793363 PASS cancel/complete ordering cancel_first=false final=succeeded
+2026/11/10 09:44:50.888780 PASS 24 concurrent cancel/complete attempts
+TRUNCATE TABLE
+ Container soupcheck20261110t094352zwbr5zp-db-1  Running
+ Container soupcheck20261110t094352zwbr5zp-migrate-1  Recreate
+ Container soupcheck20261110t094352zwbr5zp-migrate-1  Recreated
+ Container soupcheck20261110t094352zwbr5zp-api-1  Recreate
+ Container soupcheck20261110t094352zwbr5zp-worker-8  Creating
+ Container soupcheck20261110t094352zwbr5zp-worker-1  Creating
+ Container soupcheck20261110t094352zwbr5zp-worker-4  Creating
+ Container soupcheck20261110t094352zwbr5zp-worker-2  Creating
+ Container soupcheck20261110t094352zwbr5zp-worker-3  Creating
+ Container soupcheck20261110t094352zwbr5zp-worker-6  Creating
+ Container soupcheck20261110t094352zwbr5zp-worker-5  Creating
+ Container soupcheck20261110t094352zwbr5zp-worker-7  Creating
+ Container soupcheck20261110t094352zwbr5zp-worker-7  Created
+ Container soupcheck20261110t094352zwbr5zp-worker-8  Created
+ Container soupcheck20261110t094352zwbr5zp-worker-6  Created
+ Container soupcheck20261110t094352zwbr5zp-worker-1  Created
+ Container soupcheck20261110t094352zwbr5zp-worker-2  Created
+ Container soupcheck20261110t094352zwbr5zp-worker-3  Created
+ Container soupcheck20261110t094352zwbr5zp-worker-4  Created
+ Container soupcheck20261110t094352zwbr5zp-worker-5  Created
+ Container soupcheck20261110t094352zwbr5zp-api-1  Recreated
+ Container soupcheck20261110t094352zwbr5zp-db-1  Waiting
+ Container soupcheck20261110t094352zwbr5zp-db-1  Healthy
+ Container soupcheck20261110t094352zwbr5zp-migrate-1  Starting
+ Container soupcheck20261110t094352zwbr5zp-migrate-1  Started
+ Container soupcheck20261110t094352zwbr5zp-migrate-1  Waiting
+ Container soupcheck20261110t094352zwbr5zp-migrate-1  Waiting
+ Container soupcheck20261110t094352zwbr5zp-migrate-1  Exited
+ Container soupcheck20261110t094352zwbr5zp-worker-4  Starting
+ Container soupcheck20261110t094352zwbr5zp-migrate-1  Exited
+ Container soupcheck20261110t094352zwbr5zp-api-1  Starting
+ Container soupcheck20261110t094352zwbr5zp-worker-4  Started
+ Container soupcheck20261110t094352zwbr5zp-worker-5  Starting
+ Container soupcheck20261110t094352zwbr5zp-api-1  Started
+ Container soupcheck20261110t094352zwbr5zp-worker-5  Started
+ Container soupcheck20261110t094352zwbr5zp-worker-1  Starting
+ Container soupcheck20261110t094352zwbr5zp-worker-1  Started
+ Container soupcheck20261110t094352zwbr5zp-worker-6  Starting
+ Container soupcheck20261110t094352zwbr5zp-worker-6  Started
+ Container soupcheck20261110t094352zwbr5zp-worker-3  Starting
+ Container soupcheck20261110t094352zwbr5zp-worker-3  Started
+ Container soupcheck20261110t094352zwbr5zp-worker-2  Starting
+ Container soupcheck20261110t094352zwbr5zp-worker-2  Started
+ Container soupcheck20261110t094352zwbr5zp-worker-8  Starting
+ Container soupcheck20261110t094352zwbr5zp-worker-8  Started
+ Container soupcheck20261110t094352zwbr5zp-worker-7  Starting
+ Container soupcheck20261110t094352zwbr5zp-worker-7  Started
+START jobs=10000 seed=731 interval=2s
+SIGKILL elapsed=2.255s worker=5ae04e3c6152ba72e588e63ce8eaaa9e06d85e64af88471f10e27a143ded8828
+SIGKILL elapsed=5.352s worker=5ae04e3c6152ba72e588e63ce8eaaa9e06d85e64af88471f10e27a143ded8828
+SIGKILL elapsed=9.035s worker=4ac51edf4aae0327252c8ce8ca7885a89c81f760780d422b9a26c4e2ac975682
+SIGKILL elapsed=12.691s worker=e986edbb0b4d7c7e163f7db5684aa9d4a256bd3fd79ee22453a92a6d4cec6987
+SIGKILL elapsed=15.812s worker=fe1c79fb003c3ea3b37c77637b9ec531a4eb073aa962bf346ebd11a92226b7f6
+SIGKILL elapsed=19.108s worker=5ae04e3c6152ba72e588e63ce8eaaa9e06d85e64af88471f10e27a143ded8828
+SIGKILL elapsed=22.400s worker=e986edbb0b4d7c7e163f7db5684aa9d4a256bd3fd79ee22453a92a6d4cec6987
+SUBMITTED ok=10000 failed=0
+SIGKILL elapsed=26.075s worker=b5b7eb969306b245497cdb151c8adb8665b5c6c494ed342ffa19c19679763192
+SIGKILL elapsed=28.966s worker=b5b7eb969306b245497cdb151c8adb8665b5c6c494ed342ffa19c19679763192
+SIGKILL elapsed=32.017s worker=b5b7eb969306b245497cdb151c8adb8665b5c6c494ed342ffa19c19679763192
+SIGKILL elapsed=35.038s worker=5ae04e3c6152ba72e588e63ce8eaaa9e06d85e64af88471f10e27a143ded8828
+SIGKILL elapsed=37.969s worker=e986edbb0b4d7c7e163f7db5684aa9d4a256bd3fd79ee22453a92a6d4cec6987
+SIGKILL elapsed=40.655s worker=4ac51edf4aae0327252c8ce8ca7885a89c81f760780d422b9a26c4e2ac975682
+SIGKILL elapsed=43.585s worker=fe1c79fb003c3ea3b37c77637b9ec531a4eb073aa962bf346ebd11a92226b7f6
+SIGKILL elapsed=46.773s worker=853610ba7b7979618846bbbd63c509d498b5c140f48ebbc46b0fde0e8d8350d9
+SIGKILL elapsed=49.610s worker=b5b7eb969306b245497cdb151c8adb8665b5c6c494ed342ffa19c19679763192
+SIGKILL elapsed=52.409s worker=e7a2cef1e096e9879774c7b0355261de14c8dfdb96955a061eafb77af47a3b76
+SIGKILL elapsed=55.165s worker=fe1c79fb003c3ea3b37c77637b9ec531a4eb073aa962bf346ebd11a92226b7f6
+SIGKILL elapsed=58.117s worker=e986edbb0b4d7c7e163f7db5684aa9d4a256bd3fd79ee22453a92a6d4cec6987
+SIGKILL elapsed=61.112s worker=b5b7eb969306b245497cdb151c8adb8665b5c6c494ed342ffa19c19679763192
+SIGKILL elapsed=64.578s worker=5ae04e3c6152ba72e588e63ce8eaaa9e06d85e64af88471f10e27a143ded8828
+SIGKILL elapsed=67.678s worker=b5b7eb969306b245497cdb151c8adb8665b5c6c494ed342ffa19c19679763192
+SIGKILL elapsed=70.754s worker=b5b7eb969306b245497cdb151c8adb8665b5c6c494ed342ffa19c19679763192
+SIGKILL elapsed=73.756s worker=e7a2cef1e096e9879774c7b0355261de14c8dfdb96955a061eafb77af47a3b76
+AUDIT rows=10000 states={'failed': 442, 'succeeded': 7059, 'cancelled': 2499} kills=24 effects=7059 retried=16 elapsed=75.56s
+PASS all invariants and pagination
+NAME                                        IMAGE                       COMMAND                  SERVICE   CREATED              STATUS                          PORTS
+soupcheck20261110t094352zwbr5zp-api-1       soup-training-queue:local   "/queue api"             api       About a minute ago   Up About a minute               127.0.0.1:18080->8080/tcp
+soupcheck20261110t094352zwbr5zp-db-1        postgres:16-bookworm        "docker-entrypoint.s…"   db        About a minute ago   Up About a minute (healthy)     5432/tcp
+soupcheck20261110t094352zwbr5zp-migrate-1   soup-training-queue:local   "/queue migrate"         migrate   About a minute ago   Exited (0) About a minute ago   
+soupcheck20261110t094352zwbr5zp-worker-1    soup-training-queue:local   "/queue worker"          worker    About a minute ago   Up 35 seconds                   
+soupcheck20261110t094352zwbr5zp-worker-2    soup-training-queue:local   "/queue worker"          worker    About a minute ago   Up 5 seconds                    
+soupcheck20261110t094352zwbr5zp-worker-3    soup-training-queue:local   "/queue worker"          worker    About a minute ago   Up 17 seconds                   
+soupcheck20261110t094352zwbr5zp-worker-4    soup-training-queue:local   "/queue worker"          worker    About a minute ago   Up About a minute               
+soupcheck20261110t094352zwbr5zp-worker-5    soup-training-queue:local   "/queue worker"          worker    About a minute ago   Up 28 seconds                   
+soupcheck20261110t094352zwbr5zp-worker-6    soup-training-queue:local   "/queue worker"          worker    About a minute ago   Up 20 seconds                   
+soupcheck20261110t094352zwbr5zp-worker-7    soup-training-queue:local   "/queue worker"          worker    About a minute ago   Up 1 second                     
+soupcheck20261110t094352zwbr5zp-worker-8    soup-training-queue:local   "/queue worker"          worker    About a minute ago   Up 11 seconds                   
+db-1  | The files belonging to this database system will be owned by user "postgres".
+db-1  | This user must also own the server process.
+db-1  | 
+db-1  | The database cluster will be initialized with locale "en_US.utf8".
+db-1  | The default database encoding has accordingly been set to "UTF8".
+db-1  | The default text search configuration will be set to "english".
+db-1  | 
+db-1  | Data page checksums are disabled.
+db-1  | 
+db-1  | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+db-1  | creating subdirectories ... ok
+db-1  | selecting dynamic shared memory implementation ... posix
+db-1  | selecting default max_connections ... 100
+db-1  | selecting default shared_buffers ... 128MB
+db-1  | selecting default time zone ... Etc/UTC
+db-1  | creating configuration files ... ok
+db-1  | running bootstrap script ... ok
+db-1  | performing post-bootstrap initialization ... ok
+db-1  | syncing data to disk ... ok
+db-1  | 
+db-1  | 
+db-1  | Success. You can now start the database server using:
+db-1  | 
+db-1  |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+db-1  | 
+db-1  | initdb: warning: enabling "trust" authentication for local connections
+db-1  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+db-1  | waiting for server to start....2026-11-10 09:44:48.164 UTC [55] LOG:  starting PostgreSQL 16.15 (Debian 16.15-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+db-1  | 2026-11-10 09:44:48.164 UTC [55] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-1  | 2026-11-10 09:44:48.196 UTC [58] LOG:  database system was shut down at 2026-11-10 09:44:47 UTC
+db-1  | 2026-11-10 09:44:48.200 UTC [55] LOG:  database system is ready to accept connections
+db-1  |  done
+db-1  | server started
+db-1  | CREATE DATABASE
+db-1  | 
+db-1  | 
+db-1  | /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+db-1  | 
+db-1  | 2026-11-10 09:44:48.420 UTC [55] LOG:  received fast shutdown request
+db-1  | waiting for server to shut down....2026-11-10 09:44:48.421 UTC [55] LOG:  aborting any active transactions
+db-1  | 2026-11-10 09:44:48.422 UTC [55] LOG:  background worker "logical replication launcher" (PID 61) exited with exit code 1
+db-1  | 2026-11-10 09:44:48.425 UTC [56] LOG:  shutting down
+db-1  | 2026-11-10 09:44:48.428 UTC [56] LOG:  checkpoint starting: shutdown immediate
+db-1  | 2026-11-10 09:44:48.662 UTC [56] LOG:  checkpoint complete: wrote 922 buffers (5.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.145 s, sync=0.089 s, total=0.237 s; sync files=301, longest=0.065 s, average=0.001 s; distance=4255 kB, estimate=4255 kB; lsn=0/1912108, redo lsn=0/1912108
+db-1  | 2026-11-10 09:44:48.669 UTC [55] LOG:  database system is shut down
+db-1  |  done
+db-1  | server stopped
+db-1  | 
+db-1  | PostgreSQL init process complete; ready for start up.
+db-1  | 
+db-1  | 2026-11-10 09:44:48.743 UTC [1] LOG:  starting PostgreSQL 16.15 (Debian 16.15-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+db-1  | 2026-11-10 09:44:48.743 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db-1  | 2026-11-10 09:44:48.743 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db-1  | 2026-11-10 09:44:48.744 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-1  | 2026-11-10 09:44:48.748 UTC [71] LOG:  database system was shut down at 2026-11-10 09:44:48 UTC
+db-1  | 2026-11-10 09:44:48.755 UTC [1] LOG:  database system is ready to accept connections
+db-1  | 2026-11-10 09:44:56.639 UTC [133] LOG:  unexpected EOF on client connection with an open transaction
+db-1  | 2026-11-10 09:44:59.609 UTC [183] LOG:  unexpected EOF on client connection with an open transaction
+db-1  | 2026-11-10 09:45:16.337 UTC [250] LOG:  unexpected EOF on client connection with an open transaction
+db-1  | 2026-11-10 09:45:46.683 UTC [134] LOG:  could not receive data from client: Connection reset by peer
+ Container soupcheck20261110t094352zwbr5zp-worker-7  Stopping
+ Container soupcheck20261110t094352zwbr5zp-api-1  Stopping
+ Container soupcheck20261110t094352zwbr5zp-worker-4  Stopping
+ Container soupcheck20261110t094352zwbr5zp-worker-5  Stopping
+ Container soupcheck20261110t094352zwbr5zp-worker-8  Stopping
+ Container soupcheck20261110t094352zwbr5zp-worker-3  Stopping
+ Container soupcheck20261110t094352zwbr5zp-worker-2  Stopping
+ Container soupcheck20261110t094352zwbr5zp-worker-1  Stopping
+ Container soupcheck20261110t094352zwbr5zp-worker-6  Stopping
+ Container soupcheck20261110t094352zwbr5zp-worker-5  Stopped
+ Container soupcheck20261110t094352zwbr5zp-worker-5  Removing
+ Container soupcheck20261110t094352zwbr5zp-worker-5  Removed
+ Container soupcheck20261110t094352zwbr5zp-worker-4  Stopped
+ Container soupcheck20261110t094352zwbr5zp-worker-4  Removing
+ Container soupcheck20261110t094352zwbr5zp-worker-4  Removed
+ Container soupcheck20261110t094352zwbr5zp-worker-6  Stopped
+ Container soupcheck20261110t094352zwbr5zp-worker-6  Removing
+ Container soupcheck20261110t094352zwbr5zp-worker-1  Stopped
+ Container soupcheck20261110t094352zwbr5zp-worker-1  Removing
+ Container soupcheck20261110t094352zwbr5zp-worker-6  Removed
+ Container soupcheck20261110t094352zwbr5zp-worker-1  Removed
+ Container soupcheck20261110t094352zwbr5zp-worker-2  Stopped
+ Container soupcheck20261110t094352zwbr5zp-worker-2  Removing
+ Container soupcheck20261110t094352zwbr5zp-worker-7  Stopped
+ Container soupcheck20261110t094352zwbr5zp-worker-7  Removing
+ Container soupcheck20261110t094352zwbr5zp-api-1  Stopped
+ Container soupcheck20261110t094352zwbr5zp-api-1  Removing
+ Container soupcheck20261110t094352zwbr5zp-worker-3  Stopped
+ Container soupcheck20261110t094352zwbr5zp-worker-3  Removing
+ Container soupcheck20261110t094352zwbr5zp-worker-8  Stopped
+ Container soupcheck20261110t094352zwbr5zp-worker-8  Removing
+ Container soupcheck20261110t094352zwbr5zp-worker-7  Removed
+ Container soupcheck20261110t094352zwbr5zp-worker-2  Removed
+ Container soupcheck20261110t094352zwbr5zp-worker-3  Removed
+ Container soupcheck20261110t094352zwbr5zp-worker-8  Removed
+ Container soupcheck20261110t094352zwbr5zp-api-1  Removed
+ Container soupcheck20261110t094352zwbr5zp-migrate-1  Stopping
+ Container soupcheck20261110t094352zwbr5zp-migrate-1  Stopped
+ Container soupcheck20261110t094352zwbr5zp-migrate-1  Removing
+ Container soupcheck20261110t094352zwbr5zp-migrate-1  Removed
+ Container soupcheck20261110t094352zwbr5zp-db-1  Stopping
+ Container soupcheck20261110t094352zwbr5zp-db-1  Stopped
+ Container soupcheck20261110t094352zwbr5zp-db-1  Removing
+ Container soupcheck20261110t094352zwbr5zp-db-1  Removed
+ Network soupcheck20261110t094352zwbr5zp_default  Removing
+ Volume soupcheck20261110t094352zwbr5zp_queue_data  Removing
+ Network soupcheck20261110t094352zwbr5zp_default  Removed
+ Volume soupcheck20261110t094352zwbr5zp_queue_data  Removed
+END exit=0
